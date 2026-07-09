@@ -6,6 +6,7 @@ public class subSequences {
         System.out.println("Enter a string to find all subsequences");
         str = sc.nextLine();
         findSubSequences(str, 0, "");
+        sc.close();
     }
     public static void findSubSequences(String str, int idx, String newString){
         if(idx == str.length()){
