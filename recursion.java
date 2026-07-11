@@ -25,6 +25,7 @@ public class recursion {
         System.out.println("Enter a character");
         char c = sc.next().charAt(0);
         firstAndLastOccurence(str, 0, c);
+        sc.close();
     }
     
     public static int printSum(int n){
