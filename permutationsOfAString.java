@@ -3,8 +3,8 @@ public class permutationsOfAString {
     public static void main(String args[]){
         String str = "abaa";
         HashSet<String> set = new HashSet<>();
-        printComb(str, 0, "");
-        printUniqueComb(str, 0, "", set);
+        // printComb(str, 0, "");
+        printUniqueComb(str, 0, str, set);
     }
 
     public static void printComb(String str, int idx, String comb){
