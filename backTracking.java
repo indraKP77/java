@@ -1,20 +1,21 @@
 import java.util.*;
 public class backTracking {
     public static void main(String[] args) {
-        String str = "ABCD";
+        String str = "ABC";
         String perm = "";
         getPerm(str, perm, 0);
     }
     public static void getPerm(String str, String perm, int idx){
-        if(idx == str.length()){
+        if(str.length() == 0){
             System.out.println(perm);
             return;
         }
-        char currChar = str.charAt(idx);
-        perm = perm+currChar;
-        getPerm(str, perm, idx+1);
-        perm = perm.substring(0, perm.length()-1);
-        getPerm(str, perm, idx+1);
+        for(int i = 0;i < str.length();i++){
+            char currChar = str.charAt(i);
+            String newStr = str.substring(0,i)+str.substring(i+1);
+            getPerm(newStr, perm+currChar, idx+1);
+        }
+
     }
 
 
